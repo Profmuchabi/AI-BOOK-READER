@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Audiobook Reader</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class', // Enable class-based dark mode
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              // Light Theme Colors
+              'light-bg': '#ffffff',
+              'light-surface': '#f3f4f6', // Slightly off-white for cards/modals
+              'light-text-primary': '#111827',
+              'light-text-secondary': '#6b7280',
+
+              // Dark Theme Colors
+              'dark-bg': '#111827',
+              'dark-surface': '#1f2937', // Dark gray for cards/modals
+              'dark-text-primary': '#f3f4f6',
+              'dark-text-secondary': '#9ca3af',
+              
+              // Shared Brand Colors
+              'primary': '#2563eb', // A strong, accessible blue
+              'secondary': '#3b82f6', // A lighter, vibrant blue
+              'accent': '#facc15', // A warm yellow for highlights
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.553.0",
+    "pdfjs-dist": "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.min.mjs"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <!-- Add parsing libraries here, before the main module script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/epub.js/0.3.93/epub.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.8.0/mammoth.browser.min.js"></script>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+{
+  "name": "AI Audiobook Reader",
+  "description": "An intelligent audiobook reader that uses a human-like AI voice to read text aloud. It remembers your position, allowing you to seamlessly continue listening from where you left off.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
